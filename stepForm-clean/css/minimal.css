@@ -1,0 +1,152 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,800,700,600,300);
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #eaf1f5;
+  font-family: 'Open Sans', sans-serif; }
+
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.tcb-form {
+  padding: 5em 5px;
+  margin: 0 auto;
+  max-width: 600px;
+  color: #183e55; }
+  @media only screen and (min-width: 768px) {
+    .tcb-form {
+      padding: 5em 0; } }
+  .tcb-form .tcb-formInner {
+    overflow: hidden;
+    position: relative; }
+    .tcb-form .tcb-formInner .questions li {
+      padding: 0;
+      position: relative;
+      visibility: hidden;
+      transition: all 0.3s ease-in;
+      opacity: 0;
+      height: 0; }
+      .tcb-form .tcb-formInner .questions li span label {
+        font-size: 18px;
+        font-size: 1.125rem; }
+        @media only screen and (min-width: 768px) {
+          .tcb-form .tcb-formInner .questions li span label {
+            font-size: 24px;
+            font-size: 1.5rem; } }
+    .tcb-form .tcb-formInner .questions .current {
+      visibility: visible;
+      opacity: 1;
+      height: auto; }
+    .tcb-form .tcb-formInner .questions input {
+      margin-top: 10px;
+      width: 100%;
+      padding: 18px 20px 15px 20px;
+      font-size: 12px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      border: 0;
+      color: #183e55;
+      background: #cddce5;
+      outline: none; }
+      @media only screen and (min-width: 768px) {
+        .tcb-form .tcb-formInner .questions input {
+          font-size: 18px;
+          font-size: 1.125rem; } }
+      .tcb-form .tcb-formInner .questions input::-webkit-input-placeholder {
+        color: #8ab0c6; }
+    .tcb-form .tcb-formInner .hide {
+      opacity: 0;
+      visibility: hidden; }
+    .tcb-form .tcb-formInner button[type='submit'] {
+      display: none; }
+    .tcb-form .tcb-formInner #next {
+      position: absolute;
+      font-size: 24px;
+      font-size: 1.5rem;
+      right: 10px;
+      bottom: 10px;
+      cursor: pointer; }
+      @media only screen and (min-width: 768px) {
+        .tcb-form .tcb-formInner #next {
+          font-size: 30px;
+          font-size: 1.875rem; } }
+    .tcb-form .tcb-formInner .complete {
+      display: none;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      z-index: 99; }
+      .tcb-form .tcb-formInner .complete .faketext {
+        font-size: 24px;
+        font-size: 1.5rem;
+        opacity: 0;
+        visibility: none; }
+      .tcb-form .tcb-formInner .complete .done {
+        width: 100%;
+        padding: 18px 20px 18px 20px;
+        font-size: 12px;
+        font-size: 0.75rem;
+        font-weight: bold;
+        border: 0;
+        color: #183e55;
+        background: #cddce5; }
+        @media only screen and (min-width: 768px) {
+          .tcb-form .tcb-formInner .complete .done {
+            margin-top: 10px; } }
+        @media only screen and (min-width: 768px) {
+          .tcb-form .tcb-formInner .complete .done {
+            font-size: 18px;
+            font-size: 1.125rem; } }
+      .tcb-form .tcb-formInner .complete #reset {
+        position: absolute;
+        display: none;
+        bottom: 0;
+        right: 0;
+        cursor: pointer;
+        font-size: 18px;
+        font-size: 1.125rem;
+        font-weight: bold;
+        border: 0;
+        padding: 13px 20px 13px 20px;
+        color: #cddce5;
+        background: #183e55; }
+        @media only screen and (min-width: 768px) {
+          .tcb-form .tcb-formInner .complete #reset {
+            font-size: 24px;
+            font-size: 1.5rem; } }
+        .tcb-form .tcb-formInner .complete #reset i {
+          margin-left: 10px; }
+  .tcb-form .status {
+    padding-top: 5px;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: bold; }
+    .tcb-form .status:after {
+      content: "";
+      display: table;
+      clear: both; }
+    @media only screen and (min-width: 768px) {
+      .tcb-form .status {
+        font-size: 14px;
+        font-size: 0.875rem; } }
+    .tcb-form .status .formError {
+      float: left; }
+    .tcb-form .status .currentNo {
+      float: right; }
+  .tcb-form .progress {
+    width: 100%;
+    height: 5px;
+    background: #8ab0c6;
+    position: relative; }
+  .tcb-form .line {
+    transition: all 0.3s ease;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    width: 0%;
+    background: #3c6680; }
+
+/*# sourceMappingURL=minimal.css.map */

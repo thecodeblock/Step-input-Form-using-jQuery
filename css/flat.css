@@ -1,0 +1,228 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,800,700,600,300);
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #eaf1f5;
+  font-family: 'Open Sans', sans-serif; }
+
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.tcb-form {
+  padding: 5em 5px;
+  margin: 0 auto;
+  max-width: 600px;
+  color: #212121; }
+  @media only screen and (min-width: 768px) {
+    .tcb-form {
+      padding: 5em 0; } }
+  .tcb-form .tcb-formInner {
+    overflow: hidden;
+    position: relative; }
+    .tcb-form .tcb-formInner .questions {
+      position: relative;
+      height: 49px;
+      background: #183e55; }
+      .tcb-form .tcb-formInner .questions input {
+        background: #bce9f5;
+        width: 100%;
+        padding: 16px 20px 18px 60px;
+        font-size: 14px;
+        font-size: 0.875rem;
+        font-weight: bold;
+        border: 0;
+        color: #183e55;
+        outline: none; }
+        @media only screen and (min-width: 768px) {
+          .tcb-form .tcb-formInner .questions input {
+            font-size: 18px;
+            font-size: 1.125rem;
+            padding: 14px 20px 14px 80px; } }
+      .tcb-form .tcb-formInner .questions input[type="password"] {
+        letter-spacing: 4px;
+        background: #bbf2f0; }
+        .tcb-form .tcb-formInner .questions input[type="password"] ~ span {
+          background: #23beb6; }
+          .tcb-form .tcb-formInner .questions input[type="password"] ~ span label {
+            color: #177d78; }
+      .tcb-form .tcb-formInner .questions li {
+        padding: 0;
+        position: absolute;
+        bottom: 100%;
+        width: 100%;
+        -webkit-transition: bottom 0.2s ease-in;
+        -moz-transition: bottom 0.2s ease-in;
+        transition: bottom 0.2s ease-in; }
+        .tcb-form .tcb-formInner .questions li span {
+          background: #63cbe8;
+          position: absolute;
+          top: 0;
+          height: 100%;
+          padding: 15px 15px;
+          width: 50px;
+          text-align: center; }
+          @media only screen and (min-width: 768px) {
+            .tcb-form .tcb-formInner .questions li span {
+              padding: 15px 25px;
+              width: 70px; } }
+          .tcb-form .tcb-formInner .questions li span label {
+            color: #21b5de;
+            font-size: 18px;
+            font-size: 1.125rem;
+            font-weight: bold; }
+      .tcb-form .tcb-formInner .questions .current {
+        bottom: 0; }
+    .tcb-form .tcb-formInner .hide {
+      opacity: 0;
+      visibility: hidden; }
+    .tcb-form .tcb-formInner button[type='submit'] {
+      display: none; }
+    .tcb-form .tcb-formInner .complete {
+      position: absolute;
+      width: 100%;
+      bottom: 100%;
+      -webkit-transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      z-index: 99; }
+      .tcb-form .tcb-formInner .complete .done {
+        width: 100%;
+        padding: 18px 20px 19px 20px;
+        font-size: 12px;
+        font-size: 0.75rem;
+        font-weight: bold;
+        border: 0;
+        background: #fff;
+        color: #183e55; }
+        .tcb-form .tcb-formInner .complete .done:after {
+          content: "";
+          display: table;
+          clear: both; }
+        @media only screen and (min-width: 768px) {
+          .tcb-form .tcb-formInner .complete .done {
+            font-size: 18px;
+            font-size: 1.125rem; } }
+        .tcb-form .tcb-formInner .complete .done .sending {
+          position: absolute;
+          right: 20px;
+          top: 18px;
+          -webkit-animation: Rotate 3s infinite linear;
+          -moz-animation: Rotate 3s infinite linear;
+          animation: Rotate 3s infinite linear; }
+          .tcb-form .tcb-formInner .complete .done .sending.fa-check {
+            color: green;
+            -webkit-animation: Check 0.3s infinite linear;
+            -moz-animation: Check 0.3s infinite linear;
+            animation: Check 0.3s infinite linear; }
+      .tcb-form .tcb-formInner .complete #reset {
+        display: none;
+        position: absolute;
+        text-align: right;
+        bottom: 0;
+        right: 10px;
+        cursor: pointer;
+        font-size: 14px;
+        font-size: 0.875rem;
+        padding: 16px 0 18px 20px;
+        font-weight: bold;
+        border: 0;
+        color: #de6258;
+        background: none; }
+        @media only screen and (min-width: 768px) {
+          .tcb-form .tcb-formInner .complete #reset {
+            font-size: 24px;
+            font-size: 1.5rem;
+            padding: 10px 0 10px 20px; } }
+        .tcb-form .tcb-formInner .complete #reset i {
+          margin-left: 10px; }
+    .tcb-form .tcb-formInner .show {
+      bottom: 0; }
+  .tcb-form .status {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 600; }
+    @media only screen and (min-width: 768px) {
+      .tcb-form .status {
+        font-size: 18px;
+        font-size: 1.125rem; } }
+    .tcb-form .status .formError {
+      background: #de6258;
+      padding: 20px;
+      display: block;
+      -webkit-animation: Check 0.3s infinite linear;
+      -moz-animation: Check 0.3s infinite linear;
+      animation: Check 0.3s infinite linear;
+      color: #fff; }
+      @media only screen and (min-width: 768px) {
+        .tcb-form .status .formError {
+          padding: 15px; } }
+
+@-webkit-keyframes Rotate {
+  0% {
+    -webkit-transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@-moz-keyframes Rotate {
+  0% {
+    -moz-transform: rotate(0); }
+  100% {
+    -moz-transform: rotate(360deg); } }
+@keyframes Rotate {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-webkit-keyframes Check {
+  0% {
+    -webkit-transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.2); }
+  100% {
+    -webkit-transform: scale(1); } }
+@-moz-keyframes Check {
+  0% {
+    -moz-transform: scale(1); }
+  50% {
+    -moz-transform: scale(1.2); }
+  100% {
+    -moz-transform: scale(1); } }
+@keyframes Check {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } }
+
+/*# sourceMappingURL=flat.css.map */

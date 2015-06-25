@@ -1,0 +1,29 @@
+* {
+  margin: 20px;
+  display: block; }
+
+body {
+  background: #f0f0f0; }
+
+span {
+  display: inline-block;
+  margin: 20px; }
+
+#reset {
+  display: none; }
+
+.progress {
+  width: 100px;
+  height: 5px;
+  background: #ccc;
+  position: relative; }
+
+.line {
+  transition: all 0.3s ease;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  width: 0%;
+  background: red; }
+
+/*# sourceMappingURL=style.css.map */

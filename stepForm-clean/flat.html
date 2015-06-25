@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- CSS reset -->
+    <link rel="stylesheet" href="css/flat.css">
+    <!-- Gem style -->
+    <title>The code block</title>
+</head>
+<body>
+    <footer class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+        <section class="newsletter">
+
+            <form id="theForm" class="tcb-form" autocomplete="off" action="http://thecodeblock.createsend.com/t/t/s/iddkdy/" method="post">
+                <div class="tcb-formInner">
+                    <ol class="questions">
+                        <li>
+                            <input id="q1" name="username" type="text" minlength="3" required/>
+                            <span><label for="q1"><i class="fa fa-user"></i></label></span>
+                        </li>
+                        <li>
+                            <input id="q2" name="password" type="password" minlength="2" required/>
+                            <span><label for="q2"><i class="fa fa-key"></i></label></span>
+                        </li>
+                    </ol>
+                    <div class="complete">
+                        <div class="done">Sending... <i class="sending fa fa-refresh"></i></div>
+                        <button type="reset" id="reset">Fix it <i class="fa fa-arrow-right"></i>
+                    </button>
+                    </div>
+                    <button class="submit" type="submit">Send answers</button>
+                <div class="status">
+                    
+                </div>
+                </div>
+                
+            </form>
+        </section>
+    </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/flat.js"></script>
+</body>
+
+</html>

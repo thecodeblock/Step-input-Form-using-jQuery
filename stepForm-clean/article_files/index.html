@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Step Form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <footer class="site-footer">
+        <section class="newsletter">
+            <form id="theForm" class="tcb-form" autocomplete="off" action="http://thecodeblock.createsend.com/t/t/s/iddkdy/" method="post">
+                <div class="tcb-formInner">
+                    <ol class="questions">
+                        <li>
+                            <span><label for="q1">What's your Name?</label></span>
+                            <input id="q1" name="cm-name" type="text" placeholder="name" minlength="2" required/>
+                        </li>
+                        <li><span><label for="q2">What's your Email?</label></span>
+                            <input id="q2" name="cm-iddkdy-iddkdy" type="email" placeholder="email" required/>
+                        </li>
+                    </ol>
+                    <div class="complete">
+                        <div class="done">Sending...</div>
+                        <button type="reset" id="reset">Reset</button>
+                    </div>
+                    <button class="submit" type="submit">Submit Form</button>
+                    <span id="next">Next</span>
+                    <span id="prev">Prev</span>
+                </div>
+                <div class="progress">
+                    <div class="line"></div>
+                </div>
+                <div class="status">
+                    <span class="formError"></span>
+                    <span class="currentNo">0</span>
+                </div>
+            </form>
+        </section>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/stepForm.js"></script>    
+    <script src="js/jquery.validate.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- CSS reset -->
+    <link rel="stylesheet" href="css/minimal.css">
+    <!-- style -->
+    <title>The code block</title>
+</head>
+<body>
+    <footer class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+        <section class="newsletter">
+            <form id="theForm" class="tcb-form" autocomplete="off" action="http://thecodeblock.createsend.com/t/t/s/iddkdy/" method="post">
+                <div class="tcb-formInner">
+                    <ol class="questions">
+                        <li>
+                            <span><label for="q1">What's your Name?</label></span>
+                            <input id="q1" name="cm-name" type="text" placeholder="name" minlength="2" required/>
+                        </li>
+                        <li><span><label for="q2">What's your Email?</label></span>
+                            <input id="q2" name="cm-iddkdy-iddkdy" type="email" placeholder="email" required/>
+                        </li>
+                    </ol>
+                    <div class="complete">
+                        <div class="faketext">Completed</div>
+                        <div class="done">Sending...</div>
+                        <button type="reset" id="reset">Fix it <i class="fa fa-arrow-right"></i></button>
+                    </div>
+                    <button class="submit" type="submit">Send answers</button>
+                    <span id="next"><i class="fa fa-arrow-right"></i></span>
+                </div>
+                <div class="progress">
+                    <div class="line"></div>
+                </div>
+                <div class="status">
+                    <span class="formError"></span>
+                    <span class="currentNo">0</span>
+                </div>          
+            </form>
+        </section>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/minimal.js"></script>
+</body>
+</html>

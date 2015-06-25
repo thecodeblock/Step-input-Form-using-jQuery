@@ -1,0 +1,164 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,800,700,600,300);
+@import 'bourbon/bourbon';
+@import '../partials/variables';
+@import '../partials/mixins';
+@import '../partials/layout';
+*{
+    box-sizing: border-box;
+}
+body{
+    background: #eaf1f5;
+    font-family: 'Open Sans', sans-serif;
+}
+ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tcb-form{
+    padding: 5em 5px;
+    @include media(medium){
+        padding: 5em 0;
+    }
+    margin: 0 auto;
+    max-width: 600px;
+    color: #183e55;
+    .tcb-formInner{
+        overflow: hidden;
+        position: relative;
+        .questions{
+            li{
+                padding: 0;
+                position: relative;
+                span{
+                    label{
+                        @include font-size(18px);
+                        @include media(medium){
+                            @include font-size(24px);
+                        }
+                    }
+                }
+                visibility: hidden;
+                transition: all 0.3s ease-in;
+                opacity: 0;
+                height: 0;
+            }
+            .current{
+                visibility: visible;
+                opacity: 1;
+                height: auto;
+            }
+            input{
+                margin-top: 10px;
+                width: 100%;
+                padding: 18px 20px 15px 20px; 
+                @include font-size(12px);
+                @include media(medium){
+                    @include font-size(18px);
+                }
+                font-weight: bold; 
+                border: 0;
+                color: #183e55;
+                background: #cddce5;
+                outline: none;
+                &::-webkit-input-placeholder{
+                    color: #8ab0c6;
+                }
+            }
+        }
+        .hide{
+            opacity: 0;
+            visibility: hidden;
+        }
+        button[type='submit']{
+                display: none;
+            }
+        #next{
+            position: absolute;
+            @include font-size(24px);
+            @include media(medium){
+                @include font-size(30px);
+            }
+            right: 10px;
+            bottom: 10px;
+            cursor: pointer;
+        }
+        .complete{
+            display: none;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 99;
+            .faketext{
+                @include font-size(24px);
+                opacity: 0;
+                visibility: none;
+            }
+            .done{
+                @include media(medium){
+                    margin-top: 10px;
+                }
+                width: 100%;
+                padding: 18px 20px 18px 20px; 
+                @include font-size(12px);
+                @include media(medium){
+                    @include font-size(18px);
+                }
+                font-weight: bold;
+                border: 0;
+                color: #183e55;
+                background: #cddce5;;
+            }
+            #reset{
+                position: absolute;
+                display: none; 
+                bottom: 0;
+                right: 0;
+                cursor: pointer;
+                @include font-size(18px);
+                @include media(medium){
+                    @include font-size(24px);
+                }
+                font-weight: bold;
+                border: 0;
+                padding: 13px 20px 13px 20px;
+                color: #cddce5;
+                background: #183e55;
+                i{
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .status{
+        @include clearfix();
+        padding-top: 5px;
+        @include font-size(12px);
+        @include media(medium){
+            @include font-size(14px);
+        }
+        font-weight: bold;
+        .formError{
+            float: left;
+        }
+        .currentNo{
+            float: right;
+        }
+    }
+    
+    .progress{
+        width: 100%;
+        height: 5px;
+        background: #8ab0c6;
+        position: relative;
+    }
+    .line{
+        transition: all 0.3s ease;
+        position: absolute;
+        height: 100%;
+        left: 0;
+        width: 0%;
+        background: #3c6680;
+    }
+}
